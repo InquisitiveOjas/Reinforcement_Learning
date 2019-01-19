@@ -1,7 +1,28 @@
+Reinforced Learning:-
+Reinforcement learning is an area of Machine Learning. 
+It is about taking suitable action to maximize reward in a particular situation. 
+It is employed by various software and machines to find the best possible behavior or path it should take in a specific situation.
+Reinforcement learning differs from the supervised learning in a way that in supervised learning the training data has the answer keywith it.
+So the model is trained with the correct answer itself.
+Whereas in reinforcement learning, there is no answer but the reinforcement agent decides what to do to perform the given task. 
+In the absence of training dataset, it is bound to learn from its experience.
+
 Multi-Armed Bandit Problem :-
+The multi-armed bandit problem is a classic reinforcement learning example where we are given a slot machine with n arms (bandits) with each arm having its own rigged probability distribution of success. 
+Pulling any one of the arms gives you a stochastic reward of either R=+1 for success, or R=0 for failure. 
+Our objective is to pull the arms one-by-one in sequence such that we maximize our total reward collected in the long run.
 
 Upper Confidence Bound :-
+The algorithm is based on the principle of optimism in the face of uncertainty, which is to choose your actions as if the environment (in this case bandit) is as nice as is plausibly possible. 
+By this we mean that the unknown mean payoffs of each arm is as large as plausibly possible based on the data that has been observed (unfounded optimism will not work.
+For mathematical analysis :- http://banditalgs.com/2016/09/18/the-upper-confidence-bound-algorithm/
 
 Thompson Sampling :-
+The basic idea of Thompson sampling is that in each round, we take our existing knowledge of the machines, which is in the form of a 
+posterior belief about the unknown parameters, and we "sample" the parameters from this posterior distribution. 
+This sampled parameter yields a set of expected rewards for each machine, and now we bet on the one with the highest expected return, under that sampled parameter.
 
 Comparison and Conclusion :-
+Thompson sampling and upper-confidence bound algorithms share a fundamental property that underlies many of their theoretical guarantees. 
+Roughly speaking, both algorithms allocate exploratory effort to actions that might be optimal and are in this sense "optimistic." 
+Leveraging this property, one can translate regret bounds established for UCB algorithms to Bayesian regret bounds for Thompson sampling or unify regret analysis across both these algorithms and many classes of problems.
